@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cash book
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">Cash Book</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li> 
+                <li><a href="#">Service</a></li>
+            </ul>
+        </nav>
+
+    <div class="collection">  
+        <div>
+        <h1>Net Balance</h1>
+        <div id="balance">0 Rs</div>
+    </div>
+        
+        <div >
+        <h4 id="headerh3">Total In (+)</h4>
+        <div id="totalIn">0 rs</div>
+        <h4 id="headerh4">Total Out (-)</h4>
+        <div id="totalOut">0 rs </div>
+    </div>
+    </div>
+    <hr>
+
+    <div class="calculator">
+        <div class="input">
+            <input placeholder='Amount' type="number" id="Amount">
+            <input placeholder='Remark' type="text" id="Remark">
+        </div>
+        
+        <div class="amountIn">
+            <button id="save1">Cash Adding</button>
+        </div>
+        <div class="amountOut">
+            <button id="save2">Cash Removing</button>
+        </div>
+    </div>
+
+    <h5>Entries</h5>
+    <div class="entries">
+    </div>
+
+    <div class="buttons">
+         <button id="cashIn" type="submit">+ Cash In</button>
+         <button  id="cashOut" type="submit">- Cash Out</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

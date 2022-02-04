@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color:#dbe9e8; */
+}
+.container{
+    margin: 2px 2px;
+    padding: 0 8%;
+}
+.logo{
+    margin: 22px 2px;
+    font-size: 34px;
+    font-weight: bold;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    /* margin: 9px 2px; */
+    padding: 7px 20px;
+    color: black;
+    margin-top: 14px;
+    font-size:28px;
+    display: block;
+    position: relative;
+}
+nav ul li a:hover{
+    font-size:29px ;
+    border-bottom:  4px solid black;
+} 
+
+.collection{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.collection h1{
+    margin-top: 55px;
+    padding-left: 37px;
+    font-size: 44px;
+    font-family: ui-sans-serif;
+    font-weight: 400;
+}
+
+#headerh3{
+    margin-top: 61px;
+    font-size: 28px;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+#headerh4{
+    font-size: 28px;
+    padding-bottom: 5px;
+    font-weight: 500;
+
+}
+#totalIn{
+    font-size: 25px;
+    color: blue;
+}
+#totalOut{
+    font-size: 25px;
+    color: red;
+}
+
+.buttons{
+    position: absolute;
+    bottom: 7%;
+    left: 40%;
+}
+#cashIn{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px 12px;
+    border-radius: 10px;
+    padding: 7px 14px;
+    border: 2px solid black;
+    background: rgb(86, 243, 86);
+}
+#cashOut{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px 12px;
+    border-radius: 10px;
+    padding: 7px 14px;
+    border: 2px solid black;
+    background: rgb(241, 55, 55);
+}
+
+.calculator{
+    display: none;
+    position: absolute;
+    left: 32%;
+    top: 52%;
+}
+
+.calculator button{
+    margin: 5px 10px;
+    padding: 13px 34px;
+    font-size: 18px;
+    font-weight: bold;
+    background: antiquewhite;
+    border: 2px solid;
+    border-radius: 8px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+}
+.input input{
+    padding: 8px 6px;
+    margin: 2px 2px;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+
+#save{
+    margin: 10px 376px;
+    padding: 7px 26px;
+    background: rgb(139, 139, 233);
+    font-size: 20px;
+    font-weight: bold;
+}
+.entries{
+    border: 2px solid black;
+    margin: 5px 3px;
+    padding: 18px 7px;
+    display: flex;
+    flex-direction: column;
+}
+#entryAmount{
+    border-bottom:2px solid black ;
+    padding-bottom:2px ;
+    margin-bottom: 2px;
+    font-size: 23px;
+    color: rgb(16, 29, 209);
+}
+#entryRemark{
+    border-bottom:2px solid black ;
+    padding-bottom:2px ;
+    margin-bottom: 2px;
+    font-size: 23px;
+    color: rgb(223, 49, 49);
+}
+
+#balance{
+    /* border: 2px solid black; */
+    font-size: 50px;
+    font-family: system-ui;
+    padding: 2px 41px;
+    color: green;
+}
+
+
+#Amount{
+    padding: 8px 14px;
+    margin-bottom: 7px;
+    border-radius: 4px;
+}
+#Remark{
+    padding: 8px 14px;
+    border-radius: 4px;
+}
+#save1{
+    padding: 7px 16px;
+    margin-left: 88px;
+    margin-top: 25px;
+}
+#save2{
+    padding: 7px 16px;
+    margin-left: 88px;
+    margin-top: 25px;
+}
+
+@media only screen and (max-width:608px) {
+    .container{
+        
+    }
+    .logo{
+        font-size: 28px;
+    font-weight: 500;
+    }
+    nav ul li a{
+        font-size: 19px;
+        margin: 16px 5px;
+        padding: 9px 7px;
+    }
+    .collection{
+        margin-bottom: 22px;
+    }
+    .collection h1{
+        font-size: 27px;
+        font-weight: bold;
+        font-family: monospace;
+        margin-left: -31px;
+    }
+    #balance{
+        font-size: 27px;
+    margin-left: -31px;
+    font-weight: bold;
+    font-family: monospace;
+    }
+    #headerh3{
+        font-size: 14px;
+    font-weight: bold;
+    font-family: monospace;
+    }
+    #headerh4{
+        font-size: 14px;
+    font-weight: bold;
+    font-family: monospace;
+    }
+    #totalIn{
+        font-size: 18px;
+        font-weight: bold;
+        font-family: monospace;
+    }
+    #totalOut{
+        font-size: 18px;
+        font-weight: bold;
+        font-family: monospace;
+    }
+    .buttons{
+        display: flex;
+        margin: 40px -79px;
+
+    }
+    #cashIn{
+        padding: 5px 8px;
+        margin: 8px 1px;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    #cashOut{
+        padding: 5px 8px;
+        margin: 8px 1px;
+        font-size: 20px;
+    }
+    .calculator{
+        margin: 4px -70px;
+    }
+    #save1{
+        margin: 16px 61px;
+        background-color: lightgreen;
+    }
+    #save2{
+        margin: 16px 61px;
+        background-color: #ed5858;
+    }
+    
+}
