@@ -1,1 +1,1 @@
-# Cash-book
+Daily records and Expense Manager
