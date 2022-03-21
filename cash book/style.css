@@ -4,14 +4,18 @@
     box-sizing: border-box;
     /* background-color:#dbe9e8; */
 }
+
 .container{
     margin: 2px 2px;
     padding: 0 8%;
+    background: url('./images/black-gb42d52215_1280.jpg') no-repeat center center/cover;
+    height: 100vh;
 }
 .logo{
     margin: 22px 2px;
     font-size: 34px;
     font-weight: bold;
+    color: white;
 }
 nav{
     display: flex;
@@ -27,7 +31,7 @@ nav ul li a{
     text-decoration: none;
     /* margin: 9px 2px; */
     padding: 7px 20px;
-    color: black;
+    color: white;
     margin-top: 14px;
     font-size:28px;
     display: block;
@@ -35,7 +39,7 @@ nav ul li a{
 }
 nav ul li a:hover{
     font-size:29px ;
-    border-bottom:  4px solid black;
+    border-bottom:  4px solid white;
 } 
 
 .collection{
@@ -45,6 +49,7 @@ nav ul li a:hover{
 }
 
 .collection h1{
+    color: white;
     margin-top: 55px;
     padding-left: 37px;
     font-size: 44px;
@@ -53,12 +58,14 @@ nav ul li a:hover{
 }
 
 #headerh3{
+    color: white;
     margin-top: 61px;
     font-size: 28px;
     padding-bottom: 5px;
     font-weight: 500;
 }
 #headerh4{
+    color: white;
     font-size: 28px;
     padding-bottom: 5px;
     font-weight: 500;
@@ -66,11 +73,11 @@ nav ul li a:hover{
 }
 #totalIn{
     font-size: 25px;
-    color: blue;
+    color: lightgreen;
 }
 #totalOut{
     font-size: 25px;
-    color: red;
+    color: rgb(224, 44, 44);
 }
 
 .buttons{
@@ -84,7 +91,7 @@ nav ul li a:hover{
     margin: 8px 12px;
     border-radius: 10px;
     padding: 7px 14px;
-    border: 2px solid black;
+    border: 2px solid rgb(245, 244, 244);
     background: rgb(86, 243, 86);
 }
 #cashOut{
@@ -93,7 +100,7 @@ nav ul li a:hover{
     margin: 8px 12px;
     border-radius: 10px;
     padding: 7px 14px;
-    border: 2px solid black;
+    border: 2px solid white;
     background: rgb(241, 55, 55);
 }
 
@@ -123,7 +130,7 @@ nav ul li a:hover{
     font-size: 18px;
     margin-left: 10px;
     margin-right: 10px;
-    border: 2px solid black;
+    border: 2px solid white;
 }
 
 #save{
@@ -134,25 +141,26 @@ nav ul li a:hover{
     font-weight: bold;
 }
 .entries{
-    border: 2px solid black;
+    border: 2px solid white;
     margin: 5px 3px;
     padding: 18px 7px;
     display: flex;
     flex-direction: column;
 }
 #entryAmount{
-    border-bottom:2px solid black ;
+    border-bottom:2px solid white ;
     padding-bottom:2px ;
     margin-bottom: 2px;
     font-size: 23px;
-    color: rgb(16, 29, 209);
+    /* color: rgb(118, 235, 72); */
 }
 #entryRemark{
-    border-bottom:2px solid black ;
+    border-bottom:2px solid white;
     padding-bottom:2px ;
     margin-bottom: 2px;
     font-size: 23px;
-    color: rgb(223, 49, 49);
+    color: rgb(225, 236, 59);
+    justify-content: space-between;
 }
 
 #balance{
@@ -160,7 +168,7 @@ nav ul li a:hover{
     font-size: 50px;
     font-family: system-ui;
     padding: 2px 41px;
-    color: green;
+    color: rgb(60, 214, 235);
 }
 
 
@@ -258,6 +266,12 @@ nav ul li a:hover{
     #save2{
         margin: 16px 61px;
         background-color: #ed5858;
+    }
+    #entryAmount{
+        font-size: 16px;
+    }
+    #entryRemark{
+        font-size: 16px;
     }
     
 }

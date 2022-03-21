@@ -15,6 +15,7 @@ let buttons = document.querySelector('.buttons');
 let totalIn = document.getElementById('totalIn');
 let totalOut = document.getElementById('totalOut');
 let arr = [];
+let date = document.getElementById('date')
 
 cashIn.addEventListener('click', () => {
     buttons.style.display = 'none';
@@ -22,8 +23,11 @@ cashIn.addEventListener('click', () => {
     calculator.style.display = 'block';
 });
 save1.addEventListener('click', () => {
-    let html = `<div id="entryAmount">${amount.value}</div>
-    <div id="entryRemark">${remark.value}</div>`;
+let d = new Date();
+ 
+    let html = `<div id="entryAmount" style="color: rgb(118, 235, 72)"> + ${amount.value}</div>
+    <div id="entryRemark">${remark.value} ${d.toLocaleTimeString()} </div>`;
+    date.innerHTML = d.toDateString();
     entry.innerHTML += html;
     calculator.style.display = 'none';
     buttons.style.display = 'block';
@@ -32,7 +36,6 @@ save1.addEventListener('click', () => {
     amount.value = ""
     remark.value = ""
     console.log("cash in");
- 
 });
 
 cashOut.addEventListener('click', () => {
@@ -41,8 +44,10 @@ cashOut.addEventListener('click', () => {
     amountIn.style.display = 'none';
 });
 save2.addEventListener('click', () => {
-    let html = `<div id="entryAmount">${amount.value}</div>
-    <div id="entryRemark">${remark.value}</div>`;
+let d = new Date();
+
+    let html = `<div id="entryAmount" style="color: rgb(223, 49, 49)"> - ${amount.value}</div>
+    <div id="entryRemark">${remark.value }  ${d.toLocaleTimeString()} </div>`;
     entry.innerHTML += html;
     balance.innerHTML = amount.value;
     calculator.style.display = 'none';
@@ -62,9 +67,15 @@ function Push() {
         concat = concat + arr[i]
         console.log(arr[i])
     }
-    totalIn.innerHTML = concat + "rs" ;
-    console.log(concat,"total Enteries")
-    balance.innerHTML = concat + " Rs";
+    totalIn.innerHTML = concat + " rs" ;
+    // console.log(concat-amount.value,"total Enteries")
+    if(arr.length !==1){
+        balance.innerHTML =(concat-amount.value + " Rs" ) ;
+    }else{
+        balance.innerHTML = concat + " Rs";
+    }
+
+
 }
 let ar = []
 function remove() {
@@ -73,8 +84,7 @@ function remove() {
         concat = concat + arr[i]
     }
     console.log(concat,"concat out")
-    console.log(amount.value,"amount out")
-    
+    console.log(amount.value,"amount out") 
     let ad = parseInt(amount.value);
     ar.push(ad);
     let con = 0;
@@ -82,8 +92,5 @@ function remove() {
         con = con + ar[t]
     }
     totalOut.innerHTML = (con + " rs");
-    
-    balance.innerHTML = (concat - amount.value + " Rs");
-
+    balance.innerHTML = (concat - con + " Rs");
 }
-
